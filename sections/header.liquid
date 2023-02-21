@@ -19,7 +19,9 @@
   {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
+ {%- for line_item in order.line_items -%}
 test {{ line_item.fulfillment.tracking_url }}  test  
+   {% endfor %}
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
