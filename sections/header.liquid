@@ -19,6 +19,7 @@
   {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
+{{customer}}
  {%- for line_item in order.line_items -%}
 test {{ line_item.fulfillment.tracking_url }}  test  
    {% endfor %}
